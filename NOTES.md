@@ -79,7 +79,6 @@ Mỗi phần tử của `EVENTS`:
 - [ ] Bổ sung sự kiện còn thiếu nếu muốn: Triệu Quang Phục – Dạ Trạch, Văn Miếu 1070, Tết Mậu Thân 1968, chiến tranh biên giới 1979, khoán 10 1988…
 - [ ] Tính năng gợi ý: tìm kiếm/lọc theo loại sự kiện (bấm chú thích để ẩn/hiện), chế độ in/PDF, đa ngôn ngữ.
 - [ ] Kiểm tra kỹ trên thiết bị thật (điện thoại, màn hình thấp, trình duyệt khác); tối ưu hiệu năng lớp blur + canvas trên máy yếu.
-- [ ] Commit `NOTES.md` này lên repo (hiện mới tạo cục bộ, chưa commit/push).
 
 ## 7. Quy trình cập nhật
 1. Sửa `data.js` / `style.css` / `app.js`…
