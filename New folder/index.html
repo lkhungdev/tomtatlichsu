@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lịch sử Việt Nam – Từ tiền sử đến Đổi Mới</title>
+  <meta name="description" content="Tóm tắt lịch sử Việt Nam từ thời tiền sử và dựng nước đến công cuộc Đổi Mới, trên một dòng thời gian tương tác.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Ảnh nền mờ (2 lớp để chuyển cảnh mượt) -->
+    <div class="bgs" id="bgs">
+      <div class="bg" id="bgA"></div>
+      <div class="bg" id="bgB"></div>
+    </div>
+    <div class="shade"></div>
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="flash" id="flash" aria-hidden="true"></div>
+
+    <!-- Thanh tiêu đề -->
+    <header class="top">
+      <div class="brand">
+        <span class="seal" aria-hidden="true">★</span>
+        <div>
+          <h1>Lịch sử Việt Nam</h1>
+          <p>Từ thời tiền sử &amp; dựng nước đến Đổi Mới</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span class="counter" id="counter" aria-live="off">01 / 37</span>
+        <button class="pill" id="btnAuto" type="button" aria-pressed="false">
+          <span class="ico" id="autoIco">▶</span><span class="lbl" id="autoLbl">Tự động</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Phần 1: nội dung lịch sử -->
+    <main class="stage">
+      <article class="card" id="card" aria-live="polite">
+        <div class="era-tag"><i></i><span id="eraName"></span><em id="eraRange"></em><span class="type-badge" id="typeBadge"></span><span class="place" id="place"></span></div>
+        <div class="head">
+          <div class="year-row"><div class="year" id="year"></div><div class="sfx" id="sfx"></div></div>
+          <h2 id="title"></h2>
+        </div>
+        <div class="why-box" id="whyBox" hidden>
+          <div class="shift"><span class="from" id="shiftFrom"></span><i>→</i><span class="to" id="shiftTo"></span></div>
+          <p><b>Vì sao chuyển đổi?</b> <span id="whyText"></span></p>
+        </div>
+        <p class="summary" id="summary"></p>
+        <div class="grid" id="grid"></div>
+        <footer class="card-nav">
+          <button class="navbtn" id="prev" type="button" aria-label="Sự kiện trước">‹ Trước</button>
+          <div class="auto" aria-hidden="true"><span class="autobar" id="autobar"></span></div>
+          <button class="navbtn primary" id="next" type="button" aria-label="Sự kiện tiếp theo">Tiếp ›</button>
+        </footer>
+      </article>
+    </main>
+
+    <!-- Phần 2: timeline -->
+    <nav class="timeline" id="timeline" aria-label="Dòng thời gian lịch sử Việt Nam">
+      <div class="tip" id="tip" role="tooltip"></div>
+      <div class="tl-legend" id="legend" aria-hidden="true"></div>
+      <div class="tl-view" id="tlView">
+        <div class="tl-track" id="tlTrack"><div class="tl-inner" id="tlInner"></div></div>
+      </div>
+    </nav>
+  </div>
+
+  <noscript><p style="position:fixed;inset:0;display:grid;place-items:center;background:#0b0907;color:#f4ecd8;font-family:sans-serif">Trang này cần bật JavaScript.</p></noscript>
+  <script src="data.js"></script>
+  <script src="scenes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
